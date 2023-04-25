@@ -56,15 +56,55 @@
 		FD23651829F81D31005290A4 /* RandomFood */ = {
 			isa = PBXGroup;
 			children = (
-				FD23651929F81D31005290A4 /* AppDelegate.swift */,
-				FD23651B29F81D31005290A4 /* SceneDelegate.swift */,
-				FD23651D29F81D31005290A4 /* ViewController.swift */,
-				FD23651F29F81D31005290A4 /* Main.storyboard */,
+				FD23653029F81E68005290A4 /* Models */,
+				FD23652D29F81D5F005290A4 /* ViewControllers */,
+				FD23652F29F81DC1005290A4 /* Storyboards */,
+				FD23653129F81E87005290A4 /* Services */,
+				FD23652E29F81D7F005290A4 /* App */,
 				FD23652229F81D31005290A4 /* Assets.xcassets */,
-				FD23652429F81D31005290A4 /* LaunchScreen.storyboard */,
-				FD23652729F81D31005290A4 /* Info.plist */,
 			);
 			path = RandomFood;
+			sourceTree = "<group>";
+		};
+		FD23652D29F81D5F005290A4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				FD23651D29F81D31005290A4 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FD23652E29F81D7F005290A4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FD23651929F81D31005290A4 /* AppDelegate.swift */,
+				FD23651B29F81D31005290A4 /* SceneDelegate.swift */,
+				FD23652729F81D31005290A4 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FD23652F29F81DC1005290A4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FD23651F29F81D31005290A4 /* Main.storyboard */,
+				FD23652429F81D31005290A4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FD23653029F81E68005290A4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FD23653129F81E87005290A4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,7 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BMFF8ZNZAT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomFood/Info.plist;
+				INFOPLIST_FILE = RandomFood/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kasharin-M.RandomFood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +360,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BMFF8ZNZAT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomFood/Info.plist;
+				INFOPLIST_FILE = RandomFood/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,9 +373,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Kasharin-M.RandomFood";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
