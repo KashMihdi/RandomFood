@@ -47,8 +47,6 @@
 			isa = PBXGroup;
 			children = (
 				FD720BAA29F81FD7000C98EA /* .gitignore */,
-				FD1FA78C29F94235009C2712 /* Receipt.swift */,
-				FD1FA78E29F94251009C2712 /* DataStore.swift */,
 				FD23651829F81D31005290A4 /* RandomFood */,
 				FD23651729F81D31005290A4 /* Products */,
 			);
@@ -105,6 +103,7 @@
 		FD23653029F81E68005290A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FD1FA78C29F94235009C2712 /* Receipt.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,6 +111,7 @@
 		FD23653129F81E87005290A4 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FD1FA78E29F94251009C2712 /* DataStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
