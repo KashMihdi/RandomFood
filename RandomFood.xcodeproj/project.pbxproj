@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0856176029F94B240056CDCC /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0856175E29F94B240056CDCC /* Gilroy-Bold.ttf */; };
+		0856176129F94B240056CDCC /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0856175F29F94B240056CDCC /* Gilroy-Medium.ttf */; };
 		FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA78C29F94235009C2712 /* Receipt.swift */; };
 		FD1FA78F29F94251009C2712 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA78E29F94251009C2712 /* DataStore.swift */; };
 		FD23651A29F81D31005290A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23651929F81D31005290A4 /* AppDelegate.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0856175E29F94B240056CDCC /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		0856175F29F94B240056CDCC /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
 		FD1FA78C29F94235009C2712 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		FD1FA78E29F94251009C2712 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		FD23651629F81D31005290A4 /* RandomFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +47,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0856175D29F94AEA0056CDCC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0856175E29F94B240056CDCC /* Gilroy-Bold.ttf */,
+				0856175F29F94B240056CDCC /* Gilroy-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		FD23650D29F81D30005290A4 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +76,7 @@
 		FD23651829F81D31005290A4 /* RandomFood */ = {
 			isa = PBXGroup;
 			children = (
+				0856175D29F94AEA0056CDCC /* Fonts */,
 				FD23653029F81E68005290A4 /* Models */,
 				FD23652D29F81D5F005290A4 /* ViewControllers */,
 				FD23652F29F81DC1005290A4 /* Storyboards */,
@@ -175,7 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD720BAB29F81FD7000C98EA /* .gitignore in Resources */,
+				0856176129F94B240056CDCC /* Gilroy-Medium.ttf in Resources */,
 				FD23652629F81D31005290A4 /* LaunchScreen.storyboard in Resources */,
+				0856176029F94B240056CDCC /* Gilroy-Bold.ttf in Resources */,
 				FD23652329F81D31005290A4 /* Assets.xcassets in Resources */,
 				FD23652129F81D31005290A4 /* Main.storyboard in Resources */,
 			);
