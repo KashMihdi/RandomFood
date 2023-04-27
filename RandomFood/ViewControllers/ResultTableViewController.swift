@@ -11,7 +11,7 @@ class ResultTableViewController: UITableViewController {
     private var ingredientsList: [String] = []
 
     //var receipt: Receipt!
-    var receipt = Receipt.getReceipt(with: .lunch, calories: 300)
+    var receipt = Receipt.getReceipt(with: .dinner, calories: 400)
     
     override func viewDidLoad() {
         super.viewDidLoad()
