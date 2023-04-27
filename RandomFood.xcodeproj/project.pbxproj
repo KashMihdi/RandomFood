@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0856176029F94B240056CDCC /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0856175E29F94B240056CDCC /* Gilroy-Bold.ttf */; };
 		0856176129F94B240056CDCC /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0856175F29F94B240056CDCC /* Gilroy-Medium.ttf */; };
+		0856176329F94D680056CDCC /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0856176229F94D680056CDCC /* Information.storyboard */; };
+		0856176529F950010056CDCC /* TeamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856176429F950010056CDCC /* TeamList.swift */; };
 		FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA78C29F94235009C2712 /* Receipt.swift */; };
 		FD1FA78F29F94251009C2712 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA78E29F94251009C2712 /* DataStore.swift */; };
 		FD23651A29F81D31005290A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23651929F81D31005290A4 /* AppDelegate.swift */; };
@@ -23,6 +25,8 @@
 /* Begin PBXFileReference section */
 		0856175E29F94B240056CDCC /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		0856175F29F94B240056CDCC /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		0856176229F94D680056CDCC /* Information.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
+		0856176429F950010056CDCC /* TeamList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamList.swift; sourceTree = "<group>"; };
 		FD1FA78C29F94235009C2712 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		FD1FA78E29F94251009C2712 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		FD23651629F81D31005290A4 /* RandomFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +114,7 @@
 			children = (
 				FD23651F29F81D31005290A4 /* Main.storyboard */,
 				FD23652429F81D31005290A4 /* LaunchScreen.storyboard */,
+				0856176229F94D680056CDCC /* Information.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				FD1FA78E29F94251009C2712 /* DataStore.swift */,
+				0856176429F950010056CDCC /* TeamList.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -191,6 +197,7 @@
 				FD720BAB29F81FD7000C98EA /* .gitignore in Resources */,
 				0856176129F94B240056CDCC /* Gilroy-Medium.ttf in Resources */,
 				FD23652629F81D31005290A4 /* LaunchScreen.storyboard in Resources */,
+				0856176329F94D680056CDCC /* Information.storyboard in Resources */,
 				0856176029F94B240056CDCC /* Gilroy-Bold.ttf in Resources */,
 				FD23652329F81D31005290A4 /* Assets.xcassets in Resources */,
 				FD23652129F81D31005290A4 /* Main.storyboard in Resources */,
@@ -204,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0856176529F950010056CDCC /* TeamList.swift in Sources */,
 				FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */,
 				FD23651E29F81D31005290A4 /* ViewController.swift in Sources */,
 				FD23651A29F81D31005290A4 /* AppDelegate.swift in Sources */,
