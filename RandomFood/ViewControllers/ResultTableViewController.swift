@@ -22,7 +22,7 @@ class ResultTableViewController: UITableViewController {
             ingredientsList.append(ingredientString)
         }
         // Создание изображения перед таблицей.
-        let imageView = UIImageView(image: UIImage(named: receipt?.imageOfReceipt ?? ""))
+        let imageView = UIImageView(image: UIImage(named: receipt?.nameOfReceipt ?? ""))
         imageView.contentMode = .scaleToFill
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
         imageView.layer.cornerRadius = imageView.frame.height / 2
