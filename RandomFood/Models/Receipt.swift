@@ -10,7 +10,7 @@ import Foundation
 struct Receipt {
     let nameOfReceipt: String
     let description: String
-    let ingredient: [String: String]
+    let ingredients: [String: String]
     let calories: Int
     let mealTime: MealTime
     
