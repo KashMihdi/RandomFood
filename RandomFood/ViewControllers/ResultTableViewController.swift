@@ -10,20 +10,21 @@ import UIKit
 class ResultTableViewController: UITableViewController {
     private var ingredientsList: [String] = []
 
-    var receipt = Receipt.getReceipt(with: .breakfast, calories: 100)
+    //var receipt: Receipt!
+    var receipt = Receipt.getReceipt(with: .breakfast, calories: 200)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Сегодня на \(receipt?.mealTime.rawValue ?? "")"
         
-        let ingretients = receipt?.ingredient ?? [:]
+        let ingretients = receipt?.ingredients ?? [:]
         for (key, value) in ingretients {
             let ingredientString = "\(key):   \(value)"
             ingredientsList.append(ingredientString)
         }
         // Создание изображения перед таблицей.
         let imageView = UIImageView(image: UIImage(named: receipt?.nameOfReceipt ?? ""))
-        imageView.contentMode = .scaleToFill
+        imageView.contentMode = .scaleAspectFill
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
         imageView.layer.cornerRadius = imageView.frame.height / 2
         imageView.layer.masksToBounds = true
@@ -37,12 +38,14 @@ class ResultTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let titleForHeaderInSection = section == 0 ? receipt?.nameOfReceipt ?? "" : "Ингридиенты: "
+        let titleForHeaderInSection = section == 0
+            ? "\(receipt?.nameOfReceipt ?? ""), \(receipt?.calories ?? 0) ккал"
+            : "Ингридиенты: "
         return titleForHeaderInSection
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberOfRowsInSection = section == 0 ? 1 : receipt?.ingredient.keys.count ?? 0
+        let numberOfRowsInSection = section == 0 ? 1 : receipt?.ingredients.keys.count ?? 0
         return numberOfRowsInSection
     }
     
@@ -69,7 +72,7 @@ extension ResultTableViewController {
         var config = headerView.defaultContentConfiguration()
     
         config.text = self.tableView(tableView, titleForHeaderInSection: section)
-        config.textProperties.font = UIFont.myFontGilroyBold(25)
+        config.textProperties.font = UIFont.myFontGilroyBold(20)
         config.textProperties.color = UIColor.label
         // установка переноса текста на новую строку
         config.textProperties.numberOfLines = 0
