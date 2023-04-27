@@ -56,7 +56,7 @@
         <!--Navigation Controller-->
         <scene sceneID="io2-E7-A5v">
             <objects>
-                <navigationController id="pht-NR-WzI" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Result" id="pht-NR-WzI" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zhY-uo-CrU">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
