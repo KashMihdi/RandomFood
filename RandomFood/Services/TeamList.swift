@@ -6,10 +6,11 @@
 //
 
 import Foundation
-struct Person {
+struct PersonStore {
+    
     let name: String
     let surname: String
-    let age: Int
+    let age: String
     let jobTitle: String
     let bio: String
     
@@ -17,28 +18,28 @@ struct Person {
         "\(surname) \(name)"
     }
     
-    static func getPerson() -> [Person] {
+    static func getPerson() -> [PersonStore] {
         [
-            Person(
+            PersonStore(
                 name: "Алексей",
                 surname: "Филиппов",
-                age: 30,
-                jobTitle: "UX/UI designer",
-                bio: "some biography"
+                age: "30",
+                jobTitle: "iOS Developer",
+                bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             ),
-            Person(
+            PersonStore(
                 name: "Владимир",
-                surname: "Фамильянов",
-                age: 31,
-                jobTitle: "iOS developer",
-                bio: "some biography1"
+                surname: "Иванов",
+                age: "31",
+                jobTitle: "iOS Developer",
+                bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             ),
-            Person(
+            PersonStore(
                 name: "Михаил",
-                surname: "Фамильев",
-                age: 32,
-                jobTitle: "iOS developer",
-                bio: "some biography2"
+                surname: "Кашарин",
+                age: "32",
+                jobTitle: "iOS Developer",
+                bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             )
         ]
     }

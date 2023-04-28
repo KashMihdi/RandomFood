@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vWR-c5-wvH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -7,75 +7,203 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Gilroy-Bold.ttf">
+            <string>Gilroy-Bold</string>
+        </array>
+        <array key="Gilroy-Medium.ttf">
+            <string>Gilroy-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Наша команда-->
-        <scene sceneID="s3S-Ab-5He">
+        <!--О проекте-->
+        <scene sceneID="kKP-7Q-8og">
             <objects>
-                <tableViewController id="JBF-zD-zCN" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="C10-Ye-Vtc">
+                <viewController id="3FX-Mm-ZOG" customClass="InformationViewController" customModule="RandomFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xcd-cy-StI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2sT-3H-GZm">
+                                <rect key="frame" x="16" y="171" width="361" height="228"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RandomFoodLogoGreen" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-G9-sIr">
+                                        <rect key="frame" x="30" y="0.0" width="301" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="hEX-NQ-iRZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Ptc-US-Uj3">
+                                        <rect key="frame" x="4.3333333333333428" y="116" width="352.66666666666663" height="112"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-HD-WJx">
+                                                <rect key="frame" x="0.0" y="0.0" width="352.66666666666669" height="112"/>
+                                                <string key="text">Концепция проекта заключается в генерации случайных рецептов на основе режима приема пищи и желаемого потребления калорий. Пользователь может выбрать тип приема пищи, такой как завтрак, обед или ужин, указать количество калорий и получить рекомендации по приготовлению блюд.</string>
+                                                <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Команда:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-4C-1cf">
+                                <rect key="frame" x="16" y="431" width="361" height="20"/>
+                                <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a9L-PV-rJJ">
+                                <rect key="frame" x="0.0" y="459" width="393" height="339"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="60" id="g7k-H6-kDT">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g7k-H6-kDT" id="ThE-0T-uj9">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="zHg-pt-zB2" kind="show" id="Tqk-YW-eOO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qLH-wG-Bo6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="person" id="Uv7-po-lLF">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uv7-po-lLF" id="kAL-8z-1jC">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="5qZ-YK-0Fs" kind="show" id="gJm-v1-Xp9"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="JBF-zD-zCN" id="deF-Rf-MQZ"/>
-                            <outlet property="delegate" destination="JBF-zD-zCN" id="Xqa-wd-km3"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Наша команда" id="cyg-cu-Hyj"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1dr-Jb-Z2N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1135.1145038167938" y="-85.211267605633807"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="uO5-PY-Stg">
-            <objects>
-                <viewController id="5qZ-YK-0Fs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zNc-dC-pRg">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="IbW-tO-lfB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bKh-4C-1cf" firstAttribute="top" secondItem="2sT-3H-GZm" secondAttribute="bottom" constant="32" id="4TL-lF-qa0"/>
+                            <constraint firstItem="2sT-3H-GZm" firstAttribute="leading" secondItem="qLH-wG-Bo6" secondAttribute="leading" constant="16" id="73H-Ie-y9O"/>
+                            <constraint firstItem="a9L-PV-rJJ" firstAttribute="top" secondItem="bKh-4C-1cf" secondAttribute="bottom" constant="8" id="AXW-mt-dyc"/>
+                            <constraint firstItem="qLH-wG-Bo6" firstAttribute="trailing" secondItem="a9L-PV-rJJ" secondAttribute="trailing" id="B7V-T9-Flr"/>
+                            <constraint firstAttribute="trailing" secondItem="2sT-3H-GZm" secondAttribute="trailing" constant="16" id="GTD-6F-oDc"/>
+                            <constraint firstItem="bKh-4C-1cf" firstAttribute="leading" secondItem="qLH-wG-Bo6" secondAttribute="leading" constant="16" id="cJA-zx-glY"/>
+                            <constraint firstItem="qLH-wG-Bo6" firstAttribute="trailing" secondItem="bKh-4C-1cf" secondAttribute="trailing" constant="16" id="gL6-kd-IcU"/>
+                            <constraint firstItem="a9L-PV-rJJ" firstAttribute="leading" secondItem="qLH-wG-Bo6" secondAttribute="leading" id="hZx-is-lV9"/>
+                            <constraint firstItem="qLH-wG-Bo6" firstAttribute="bottom" secondItem="a9L-PV-rJJ" secondAttribute="bottom" constant="20" id="lc7-ex-m1t"/>
+                            <constraint firstItem="2sT-3H-GZm" firstAttribute="top" secondItem="qLH-wG-Bo6" secondAttribute="top" constant="16" id="r6p-OI-9lx"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yOG-mj-ihS"/>
+                    <navigationItem key="navigationItem" title="О проекте" id="Qhy-2E-bQ9"/>
+                    <connections>
+                        <outlet property="tableView" destination="a9L-PV-rJJ" id="c8c-7M-LJi"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddb-Nq-scD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w1D-aK-kGG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2015" y="-85"/>
+            <point key="canvasLocation" x="1135" y="650"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="pyi-rV-f4n">
+        <scene sceneID="mM2-gk-2cc">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u2J-Ud-hI8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vWR-c5-wvH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="aSf-wX-fE5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="gfy-SL-PhJ">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="JBF-zD-zCN" kind="relationship" relationship="rootViewController" id="axU-Qv-J3e"/>
+                        <segue destination="3FX-Mm-ZOG" kind="relationship" relationship="rootViewController" id="n9r-Dv-mcl"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KZY-ez-ob4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VKd-TD-0p8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208.3969465648855" y="-85.211267605633807"/>
+            <point key="canvasLocation" x="285" y="650"/>
+        </scene>
+        <!--Фамилия Имя-->
+        <scene sceneID="hJB-ef-sae">
+            <objects>
+                <viewController id="zHg-pt-zB2" customClass="AboutPersonViewController" customModule="RandomFood" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qca-hd-5JE">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="lCp-Cn-Uxx">
+                                <rect key="frame" x="16" y="170.99999999999997" width="361" height="506.33333333333326"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p0Q-9A-tes">
+                                        <rect key="frame" x="80.666666666666686" y="0.0" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="3r7-eO-fXF"/>
+                                            <constraint firstAttribute="height" constant="200" id="NxN-FL-ZGb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="2ca-TN-7iM">
+                                        <rect key="frame" x="5" y="231.99999999999997" width="351" height="274.33333333333326"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ixc-VO-Q19">
+                                                <rect key="frame" x="0.0" y="0.0" width="351" height="72"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Информация:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4p3-FI-EkV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="351" height="23.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Возраст:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9l-wN-S6h">
+                                                        <rect key="frame" x="0.0" y="31.333333333333314" width="351" height="16.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Должность:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E31-WU-z3D">
+                                                        <rect key="frame" x="0.0" y="55.666666666666686" width="351" height="16.333333333333329"/>
+                                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fZh-Hm-1wU">
+                                                <rect key="frame" x="0.0" y="96.000000000000014" width="351" height="178.33333333333337"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Биография:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZVE-BH-XTv">
+                                                        <rect key="frame" x="0.0" y="0.0" width="351" height="23.333333333333332"/>
+                                                        <fontDescription key="fontDescription" name="Gilroy-Bold" family="Gilroy" pointSize="20"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czD-fW-AtA">
+                                                        <rect key="frame" x="0.0" y="31.333333333333371" width="351" height="147"/>
+                                                        <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                                        <fontDescription key="fontDescription" name="Gilroy-Medium" family="Gilroy" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2rf-Hd-CDu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lCp-Cn-Uxx" firstAttribute="top" secondItem="2rf-Hd-CDu" secondAttribute="top" constant="16" id="0hg-Gm-ftz"/>
+                            <constraint firstAttribute="trailing" secondItem="lCp-Cn-Uxx" secondAttribute="trailing" constant="16" id="chw-IT-tic"/>
+                            <constraint firstItem="lCp-Cn-Uxx" firstAttribute="leading" secondItem="2rf-Hd-CDu" secondAttribute="leading" constant="16" id="oEo-1n-nlV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Фамилия Имя" id="YSG-bt-mQG"/>
+                    <connections>
+                        <outlet property="ageOfPerson" destination="l9l-wN-S6h" id="CjX-NH-s3W"/>
+                        <outlet property="bioOfPerson" destination="czD-fW-AtA" id="8Jw-Nl-Qty"/>
+                        <outlet property="jobTitleOfPerson" destination="E31-WU-z3D" id="DQR-R5-w8Q"/>
+                        <outlet property="photoOfPerson" destination="p0Q-9A-tes" id="Z5u-MK-xve"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FB5-hk-cJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1956" y="650"/>
         </scene>
     </scenes>
     <resources>
+        <image name="RandomFoodLogoGreen" width="301" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
