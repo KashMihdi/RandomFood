@@ -36,6 +36,11 @@ class MainViewController: UIViewController {
         breakfastButton.isSelected = true
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        caloriesTextField.text = ""
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -120,15 +125,17 @@ class MainViewController: UIViewController {
         alertView.cancelButton.layer.cornerRadius = 16
         var configCancel = alertView.cancelButton.configuration
         configCancel?.title = "Cancel"
-        configCancel?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 24)
+        configCancel?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 20)
         alertView.cancelButton.configuration = configCancel
         alertView.randomButton.layer.cornerRadius = 16
         var configRandom = alertView.randomButton.configuration
         configRandom?.title = "Random"
-        configRandom?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 24)
+        configRandom?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 20)
         alertView.randomButton.configuration = configRandom
         
         blurEffect.alpha = 0.9
+        tabBarController?.tabBar.isHidden = true
+        navigationController?.navigationBar.isHidden = true
         
         alertView.cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
         alertView.randomButton.addTarget(self, action: #selector(randomButtonTapped), for: .touchUpInside)
@@ -137,6 +144,8 @@ class MainViewController: UIViewController {
     @objc func cancelButtonTapped() {
         alertView.removeFromSuperview()
         blurEffect.alpha = 0
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.navigationBar.isHidden = false
     }
     
     @objc func randomButtonTapped() {
@@ -146,6 +155,8 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(secondVC, animated: true)
         alertView.removeFromSuperview()
         blurEffect.alpha = 0
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.navigationBar.isHidden = false
     }
 }
 
