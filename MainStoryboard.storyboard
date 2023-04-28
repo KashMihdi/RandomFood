@@ -276,9 +276,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tLL-83-PVh" customClass="TabBarController" customModule="RandomFood" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="RandomFood" id="A8A-mS-8JY">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="Syo-kp-rwn">
-                            <color key="tintColor" red="0.58431375029999999" green="0.82745099070000006" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.3.sequence.fill" catalog="system" id="rL6-aR-MkW"/>
                     </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sFI-3i-wCH">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -297,7 +295,7 @@
     <resources>
         <image name="circle" catalog="system" width="128" height="123"/>
         <image name="circle.inset.filled" catalog="system" width="128" height="123"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person.3.sequence.fill" catalog="system" width="128" height="59"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

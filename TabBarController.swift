@@ -11,6 +11,7 @@ class TabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.tabBarItem.image = #imageLiteral(resourceName: "RandomFoodLogo")
         tabBar.tintColor = .tabBarItemAccent
         getViewController()
     }

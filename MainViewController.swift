@@ -15,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var findRecipeButton: UIButton!
     
     @IBOutlet weak var blurEffect: UIVisualEffectView!
+    
     @IBOutlet var mealTimeViews: [UIView]!
     
     @IBOutlet weak var breakfastButton: UIButton!
@@ -120,20 +121,20 @@ class MainViewController: UIViewController {
         view.addSubview(alertView)
         alertView.center = view.center
         alertView.alertView.layer.cornerRadius = 30
-        alertView.titleLabel.font = UIFont(name: "Gilroy-Bold", size: 22)
-        alertView.messageLabel.font = UIFont(name: "Gilroy-Medium", size: 16)
+        alertView.titleLabel.font = UIFont(name: "Gilroy-Bold", size: 21)
+        alertView.messageLabel.font = UIFont(name: "Gilroy-Medium", size: 18)
         alertView.cancelButton.layer.cornerRadius = 16
         var configCancel = alertView.cancelButton.configuration
-        configCancel?.title = "Cancel"
+        configCancel?.title = "Выход"
         configCancel?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 20)
         alertView.cancelButton.configuration = configCancel
         alertView.randomButton.layer.cornerRadius = 16
         var configRandom = alertView.randomButton.configuration
-        configRandom?.title = "Random"
+        configRandom?.title = "Найти"
         configRandom?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 20)
         alertView.randomButton.configuration = configRandom
         
-        blurEffect.alpha = 0.9
+        blurEffect.alpha = 1
         tabBarController?.tabBar.isHidden = true
         navigationController?.navigationBar.isHidden = true
         
