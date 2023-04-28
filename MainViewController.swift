@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet var mealTimeLabels: [UILabel]!
     @IBOutlet weak var findRecipeButton: UIButton!
     
+    @IBOutlet weak var blurEffect: UIVisualEffectView!
     @IBOutlet var mealTimeViews: [UIView]!
     
     @IBOutlet weak var breakfastButton: UIButton!
@@ -21,6 +22,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var dinnerButton: UIButton!
     
     private var mealSelector: MealTime = .breakfast
+    private var alertView: AlertView!
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -28,6 +30,7 @@ class MainViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        blurEffect.alpha = 0
         super.viewDidLoad()
         setupUI()
         breakfastButton.isSelected = true
@@ -65,26 +68,12 @@ class MainViewController: UIViewController {
         guard let secondVC = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
         
         let receipt = Receipt.getReceipt(with: mealSelector, calories: Int(caloriesTextField.text ?? ""))
-        
+
         if let receipt {
             secondVC.str = receipt.nameOfReceipt
             self.navigationController?.pushViewController(secondVC, animated: true)
         } else {
-            let alert = UIAlertController(title: "Нет подходящего рецепта", message: "Зарандомим?", preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "OK", style: .default) {  _ in
-
-                let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
-                guard let secondVC = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-                secondVC.str = Receipt.getReceipt(with: self.mealSelector, calories: nil)?.nameOfReceipt
-                self.navigationController?.pushViewController(secondVC, animated: true)
-            }
-
-            let cancelButton = UIAlertAction(title: "Выход", style: .default)
-
-            let actions = [okButton, cancelButton]
-            alert.setValue(actions, forKey: "actions")
-
-            present(alert, animated: true)
+            setAlert()
         }
     }
     
@@ -119,6 +108,44 @@ class MainViewController: UIViewController {
         for view in mealTimeViews {
             view.clipsToBounds = true
         }
+    }
+    
+    private func setAlert() {
+        alertView = Bundle.main.loadNibNamed("AlertView", owner: self)?.first as? AlertView
+        view.addSubview(alertView)
+        alertView.center = view.center
+        alertView.alertView.layer.cornerRadius = 30
+        alertView.titleLabel.font = UIFont(name: "Gilroy-Bold", size: 22)
+        alertView.messageLabel.font = UIFont(name: "Gilroy-Medium", size: 16)
+        alertView.cancelButton.layer.cornerRadius = 16
+        var configCancel = alertView.cancelButton.configuration
+        configCancel?.title = "Cancel"
+        configCancel?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 24)
+        alertView.cancelButton.configuration = configCancel
+        alertView.randomButton.layer.cornerRadius = 16
+        var configRandom = alertView.randomButton.configuration
+        configRandom?.title = "Random"
+        configRandom?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 24)
+        alertView.randomButton.configuration = configRandom
+        
+        blurEffect.alpha = 0.9
+        
+        alertView.cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
+        alertView.randomButton.addTarget(self, action: #selector(randomButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func cancelButtonTapped() {
+        alertView.removeFromSuperview()
+        blurEffect.alpha = 0
+    }
+    
+    @objc func randomButtonTapped() {
+        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
+        secondVC.str = Receipt.getReceipt(with: self.mealSelector, calories: nil)?.nameOfReceipt
+        self.navigationController?.pushViewController(secondVC, animated: true)
+        alertView.removeFromSuperview()
+        blurEffect.alpha = 0
     }
 }
 

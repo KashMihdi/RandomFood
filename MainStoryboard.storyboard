@@ -169,6 +169,14 @@
                                     <action selector="generateButtonPressed" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S7R-cK-GSu"/>
                                 </connections>
                             </button>
+                            <visualEffectView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3zP-n6-rIv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Dif-Lc-muk">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -176,12 +184,16 @@
                             <constraint firstItem="t6w-2X-7dV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="3mb-qr-8yI"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="d2f-ut-2J8" secondAttribute="trailing" constant="16" id="8Ru-VM-Hrd"/>
                             <constraint firstItem="t0x-1J-vTt" firstAttribute="top" secondItem="t6w-2X-7dV" secondAttribute="bottom" constant="40" id="GOj-Dy-KCE"/>
+                            <constraint firstItem="3zP-n6-rIv" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="HBT-hs-NEj"/>
+                            <constraint firstItem="3zP-n6-rIv" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="XSc-6n-yjK"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="t6w-2X-7dV" secondAttribute="trailing" constant="16" id="XSi-hj-dX1"/>
                             <constraint firstItem="t6w-2X-7dV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="iLZ-Dg-UXS"/>
+                            <constraint firstAttribute="bottom" secondItem="3zP-n6-rIv" secondAttribute="bottom" id="lRj-uM-rPj"/>
                             <constraint firstItem="d2f-ut-2J8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="mEU-w0-gcm"/>
                             <constraint firstItem="d2f-ut-2J8" firstAttribute="height" secondItem="3P5-23-rhp" secondAttribute="height" multiplier="1.02041" id="nEZ-Gj-zbj"/>
                             <constraint firstItem="t0x-1J-vTt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="olV-pw-cUF"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="t0x-1J-vTt" secondAttribute="trailing" constant="16" id="r6X-of-Nzs"/>
+                            <constraint firstItem="3zP-n6-rIv" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ukt-ob-W76"/>
                             <constraint firstItem="d2f-ut-2J8" firstAttribute="top" secondItem="t0x-1J-vTt" secondAttribute="bottom" constant="50" id="xtd-Qs-gAo"/>
                             <constraint firstItem="t0x-1J-vTt" firstAttribute="height" secondItem="5EZ-qb-Rvc" secondAttribute="height" multiplier="1:3.5" id="z6X-MQ-uVs"/>
                         </constraints>
@@ -191,6 +203,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" style="plain" id="Jyf-fD-q26"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="blurEffect" destination="3zP-n6-rIv" id="I0c-Mr-BvN"/>
                         <outlet property="breakfastButton" destination="x8L-Al-ENB" id="1A1-3I-l6u"/>
                         <outlet property="caloriesTextField" destination="t6w-2X-7dV" id="dcf-7K-ekl"/>
                         <outlet property="dinnerButton" destination="MNI-sv-feg" id="B29-Ol-d53"/>
@@ -246,6 +259,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="enB-1Q-gxm">
                         <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.58431375029999999" green="0.82745099070000006" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
