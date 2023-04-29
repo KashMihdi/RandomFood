@@ -25,7 +25,6 @@ class DirectoryTableViewController: UITableViewController {
         categories.count
     }
 
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Directory", for: indexPath)
         var content = cell.defaultContentConfiguration()
@@ -51,10 +50,8 @@ class DirectoryTableViewController: UITableViewController {
         return cell
     }
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        "Выберете время приема пищи:"
+        "Выберите время приема пищи:"
     }
-
-   
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
