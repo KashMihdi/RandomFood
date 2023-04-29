@@ -26,8 +26,12 @@ class TabBarController: UITabBarController {
                 mainVC.tabBarItem.image = UIImage(systemName: "house.fill")
             } else if let ingredientVC = navigationVC?.topViewController as? IngredientsViewController {
                 ingredientVC.title = "Выбери продукты"
-                ingredientVC.tabBarItem.title = "Food"
-                ingredientVC.tabBarItem.image = UIImage(systemName: "house.fill")
+                ingredientVC.tabBarItem.title = "Продукты"
+                ingredientVC.tabBarItem.image = UIImage(systemName: "checklist")
+            } else if let directoryVC = navigationVC?.topViewController as? DirectoryTableViewController {
+                directoryVC.title = "Рецепты"
+                directoryVC.tabBarItem.title = "Рецепты"
+                directoryVC.tabBarItem.image = UIImage(systemName: "fork.knife")
             }
         }
     }

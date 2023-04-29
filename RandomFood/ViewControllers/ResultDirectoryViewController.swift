@@ -11,8 +11,10 @@ class ResultDirectoryViewController: UITableViewController {
     private var ingredientsList: [String] = []
     
     var receipts: Receipt!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(receipts.nameOfReceipt)
         
         title = "Сегодня на \(receipts?.mealTime.rawValue ?? "")"
         

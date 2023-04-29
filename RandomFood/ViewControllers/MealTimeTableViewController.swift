@@ -40,11 +40,14 @@ class MealTimeTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        let resultVC = segue.destination as? ResultDirectoryViewController
-        resultVC?.receipts = receipts[indexPath.row]
+        guard let resultVC = segue.destination as? ResultTableViewController else { return }
+        resultVC.receipts = sender as? Receipt
         
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let receipt = receipts[indexPath.row]
+        performSegue(withIdentifier: "receipt", sender: receipt)
     }
 }

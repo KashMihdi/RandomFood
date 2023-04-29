@@ -15,7 +15,7 @@ struct Receipt {
     let mealTime: MealTime
     
     var ingredientsForReceipt: Set<String> {
-        Set(ingredient.keys)
+        Set(ingredients.keys)
     }
     
     static func getReceipt(with mealTime: MealTime, calories: Int?) -> Receipt? {

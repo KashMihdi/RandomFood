@@ -48,6 +48,11 @@ class MainViewController: UIViewController {
         view.endEditing(true)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultVC = segue.destination as? ResultTableViewController else { return }
+        resultVC.receipts = sender as? Receipt
+    }
+    
     // MARK: - IBActions
     @IBAction func chooseButtonPressed(_ sender: UIButton) {
         switch sender {
@@ -70,18 +75,15 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func generateButtonPressed() {
-        
-        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
-        guard let secondVC = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-        
+
         let receipt = Receipt.getReceipt(with: mealSelector, calories: Int(caloriesTextField.text ?? ""))
 
         if let receipt {
-            secondVC.str = receipt.nameOfReceipt
-            self.navigationController?.pushViewController(secondVC, animated: true)
+            performSegue(withIdentifier: "Result", sender: receipt)
         } else {
             setAlert()
         }
+        
     }
     
     @objc func cancelButtonTapped() {
@@ -92,15 +94,14 @@ class MainViewController: UIViewController {
     }
     
     @objc func randomButtonTapped() {
-        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
-        guard let secondVC = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-        secondVC.str = Receipt.getReceipt(with: self.mealSelector, calories: nil)?.nameOfReceipt
-        self.navigationController?.pushViewController(secondVC, animated: true)
-        alertView.removeFromSuperview()
+        let receipt = Receipt.getReceipt(with: self.mealSelector, calories: nil)
         
+        alertView.removeFromSuperview()
         blurEffect.alpha = 0
         tabBarController?.tabBar.isHidden = false
         navigationController?.navigationBar.isHidden = false
+        
+        performSegue(withIdentifier: "Result", sender: receipt)
     }
     
     

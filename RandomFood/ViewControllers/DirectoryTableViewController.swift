@@ -16,10 +16,6 @@ class DirectoryTableViewController: UITableViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Справочник рецептов"
-        
-       
-        
     }
 
     // MARK: - Table view data source
