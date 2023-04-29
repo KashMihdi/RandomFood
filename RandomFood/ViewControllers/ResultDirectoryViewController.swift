@@ -30,7 +30,7 @@ class ResultDirectoryViewController: UITableViewController {
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 200))
         let inset: CGFloat = 16
-        imageView.frame = CGRect(x: inset, y: inset, width: headerView.frame.width - inset * 2, height: headerView.frame.height - inset * 2)
+        imageView.frame = CGRect(x: inset, y: inset, width: headerView.frame.width - inset * 2, height: 200)
         headerView.addSubview(imageView)
         
         tableView.tableHeaderView = headerView
