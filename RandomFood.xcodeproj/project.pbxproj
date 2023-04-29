@@ -9,11 +9,20 @@
 /* Begin PBXBuildFile section */
 		0856176029F94B240056CDCC /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0856175E29F94B240056CDCC /* Gilroy-Bold.ttf */; };
 		0856176129F94B240056CDCC /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0856175F29F94B240056CDCC /* Gilroy-Medium.ttf */; };
+
+		87526C1B29FC38AC0022A1F7 /* DirectoryReceipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87526C1A29FC38AC0022A1F7 /* DirectoryReceipt.storyboard */; };
+		87526C1D29FC38FD0022A1F7 /* DirectoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87526C1C29FC38FD0022A1F7 /* DirectoryTableViewController.swift */; };
+		87526C1F29FC3F1C0022A1F7 /* MealTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87526C1E29FC3F1C0022A1F7 /* MealTimeTableViewController.swift */; };
+		87526C2129FC7AAF0022A1F7 /* ResultDirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87526C2029FC7AAF0022A1F7 /* ResultDirectoryViewController.swift */; };
+		87662B2029FADB080001AE6C /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87662B1F29FADB080001AE6C /* ResultTableViewController.swift */; };
+		87662B2229FADB360001AE6C /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87662B2129FADB360001AE6C /* Result.storyboard */; };
+
 		0856176529F950010056CDCC /* TeamList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856176429F950010056CDCC /* TeamList.swift */; };
 		0856176B29FAB5B20056CDCC /* AboutPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856176A29FAB5B20056CDCC /* AboutPersonViewController.swift */; };
 		0856176F29FAED2F0056CDCC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856176E29FAED2F0056CDCC /* InformationViewController.swift */; };
 		0856177129FAEE4D0056CDCC /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0856177029FAEE4D0056CDCC /* Information.storyboard */; };
 		0856177729FD06E10056CDCC /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856177629FD06E10056CDCC /* PersonTableViewCell.swift */; };
+
 		FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA78C29F94235009C2712 /* Receipt.swift */; };
 		FD1FA78F29F94251009C2712 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA78E29F94251009C2712 /* DataStore.swift */; };
 		FD23651A29F81D31005290A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23651929F81D31005290A4 /* AppDelegate.swift */; };
@@ -37,6 +46,13 @@
 /* Begin PBXFileReference section */
 		0856175E29F94B240056CDCC /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		0856175F29F94B240056CDCC /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+
+		87526C1A29FC38AC0022A1F7 /* DirectoryReceipt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectoryReceipt.storyboard; sourceTree = "<group>"; };
+		87526C1C29FC38FD0022A1F7 /* DirectoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewController.swift; sourceTree = "<group>"; };
+		87526C1E29FC3F1C0022A1F7 /* MealTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTimeTableViewController.swift; sourceTree = "<group>"; };
+		87526C2029FC7AAF0022A1F7 /* ResultDirectoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDirectoryViewController.swift; sourceTree = "<group>"; };
+		87662B1F29FADB080001AE6C /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		87662B2129FADB360001AE6C /* Result.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		0856176429F950010056CDCC /* TeamList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamList.swift; sourceTree = "<group>"; };
 		0856176A29FAB5B20056CDCC /* AboutPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPersonViewController.swift; sourceTree = "<group>"; };
 		0856176E29FAED2F0056CDCC /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
@@ -130,11 +146,16 @@
 		FD23652D29F81D5F005290A4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+
+				87662B1F29FADB080001AE6C /* ResultTableViewController.swift */,
+				87526C1C29FC38FD0022A1F7 /* DirectoryTableViewController.swift */,
+				87526C1E29FC3F1C0022A1F7 /* MealTimeTableViewController.swift */,
+				FD23651D29F81D31005290A4 /* ViewController.swift */,
+				87526C2029FC7AAF0022A1F7 /* ResultDirectoryViewController.swift */,
 				FDEAC89A29F997E10008A6C2 /* TabBarController.swift */,
 				FD293DF629F95E6E00C1385B /* MainViewController.swift */,
 				FDA9E5E129FBFBE800AACC59 /* IngredientsViewController.swift */,
 				FD23651D29F81D31005290A4 /* ViewController.swift */,
-
 				0856176A29FAB5B20056CDCC /* AboutPersonViewController.swift */,
 				0856176E29FAED2F0056CDCC /* InformationViewController.swift */,
 			);
@@ -154,6 +175,9 @@
 		FD23652F29F81DC1005290A4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				87662B2129FADB360001AE6C /* Result.storyboard */,
+				87526C1A29FC38AC0022A1F7 /* DirectoryReceipt.storyboard */,
+				FD23652429F81D31005290A4 /* LaunchScreen.storyboard */,
 				FD23652429F81D31005290A4 /* LaunchScreen.storyboard */,
 				0856177029FAEE4D0056CDCC /* Information.storyboard */,
 			);
@@ -236,9 +260,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87662B2229FADB360001AE6C /* Result.storyboard in Resources */,
 				FDDF1BC029FAE45A0024F617 /* AlertView.xib in Resources */,
 				FD720BAB29F81FD7000C98EA /* .gitignore in Resources */,
 				0856176129F94B240056CDCC /* Gilroy-Medium.ttf in Resources */,
+				87526C1B29FC38AC0022A1F7 /* DirectoryReceipt.storyboard in Resources */,
 				FD23652629F81D31005290A4 /* LaunchScreen.storyboard in Resources */,
 				FD293DF529F95DCC00C1385B /* MainStoryboard.storyboard in Resources */,
 				0856176029F94B240056CDCC /* Gilroy-Bold.ttf in Resources */,
@@ -255,12 +281,17 @@
 			buildActionMask = 2147483647;
 			files = (
 
+				87526C2129FC7AAF0022A1F7 /* ResultDirectoryViewController.swift in Sources */,
+				FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */,
+				87526C1D29FC38FD0022A1F7 /* DirectoryTableViewController.swift in Sources */,
 				0856176529F950010056CDCC /* TeamList.swift in Sources */,
 				FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */,
 				0856176F29FAED2F0056CDCC /* InformationViewController.swift in Sources */,
 				0856177729FD06E10056CDCC /* PersonTableViewCell.swift in Sources */,
 				0856176B29FAB5B20056CDCC /* AboutPersonViewController.swift in Sources */,
 				FD23651E29F81D31005290A4 /* ViewController.swift in Sources */,
+				87526C1F29FC3F1C0022A1F7 /* MealTimeTableViewController.swift in Sources */,
+				87662B2029FADB080001AE6C /* ResultTableViewController.swift in Sources */,
 				FD23651A29F81D31005290A4 /* AppDelegate.swift in Sources */,
 				FDDF1BC229FAF10C0024F617 /* AlertView.swift in Sources */,
 				FD293DF729F95E6E00C1385B /* MainViewController.swift in Sources */,
@@ -416,7 +447,9 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Information;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+        
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -448,7 +481,9 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Information;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+        
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
