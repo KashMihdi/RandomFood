@@ -21,7 +21,17 @@
 		FD23651E29F81D31005290A4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23651D29F81D31005290A4 /* ViewController.swift */; };
 		FD23652329F81D31005290A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FD23652229F81D31005290A4 /* Assets.xcassets */; };
 		FD23652629F81D31005290A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD23652429F81D31005290A4 /* LaunchScreen.storyboard */; };
+		FD293DF529F95DCC00C1385B /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FD293DF429F95DCC00C1385B /* MainStoryboard.storyboard */; };
+		FD293DF729F95E6E00C1385B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD293DF629F95E6E00C1385B /* MainViewController.swift */; };
 		FD720BAB29F81FD7000C98EA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FD720BAA29F81FD7000C98EA /* .gitignore */; };
+		FDA9E5DE29FBED7F00AACC59 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA9E5DD29FBED7F00AACC59 /* Ingredient.swift */; };
+		FDA9E5E029FBFBA100AACC59 /* IngredientSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDA9E5DF29FBFBA100AACC59 /* IngredientSB.storyboard */; };
+		FDA9E5E229FBFBE800AACC59 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA9E5E129FBFBE800AACC59 /* IngredientsViewController.swift */; };
+		FDBEB8AE29FD36010098BB4E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEB8AD29FD36010098BB4E /* SecondViewController.swift */; };
+		FDBEB8B029FD363D0098BB4E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEB8AF29FD363D0098BB4E /* ThirdViewController.swift */; };
+		FDDF1BC029FAE45A0024F617 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDF1BBF29FAE45A0024F617 /* AlertView.xib */; };
+		FDDF1BC229FAF10C0024F617 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDF1BC129FAF10C0024F617 /* AlertView.swift */; };
+		FDEAC89B29F997E10008A6C2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAC89A29F997E10008A6C2 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +51,17 @@
 		FD23652229F81D31005290A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FD23652529F81D31005290A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FD23652729F81D31005290A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD293DF429F95DCC00C1385B /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FD293DF629F95E6E00C1385B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FD720BAA29F81FD7000C98EA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		FDA9E5DD29FBED7F00AACC59 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		FDA9E5DF29FBFBA100AACC59 /* IngredientSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IngredientSB.storyboard; sourceTree = "<group>"; };
+		FDA9E5E129FBFBE800AACC59 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		FDBEB8AD29FD36010098BB4E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		FDBEB8AF29FD363D0098BB4E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		FDDF1BBF29FAE45A0024F617 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
+		FDDF1BC129FAF10C0024F617 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		FDEAC89A29F997E10008A6C2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +95,9 @@
 		FD23650D29F81D30005290A4 = {
 			isa = PBXGroup;
 			children = (
+				FDBEB8AD29FD36010098BB4E /* SecondViewController.swift */,
+				FDBEB8AF29FD363D0098BB4E /* ThirdViewController.swift */,
+				FDDF1BBF29FAE45A0024F617 /* AlertView.xib */,
 				FD720BAA29F81FD7000C98EA /* .gitignore */,
 				FD23651829F81D31005290A4 /* RandomFood */,
 				FD23651729F81D31005290A4 /* Products */,
@@ -107,9 +130,14 @@
 		FD23652D29F81D5F005290A4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FDEAC89A29F997E10008A6C2 /* TabBarController.swift */,
+				FD293DF629F95E6E00C1385B /* MainViewController.swift */,
+				FDA9E5E129FBFBE800AACC59 /* IngredientsViewController.swift */,
 				FD23651D29F81D31005290A4 /* ViewController.swift */,
+
 				0856176A29FAB5B20056CDCC /* AboutPersonViewController.swift */,
 				0856176E29FAED2F0056CDCC /* InformationViewController.swift */,
+ main
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -127,6 +155,8 @@
 		FD23652F29F81DC1005290A4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+
+ main
 				FD23652429F81D31005290A4 /* LaunchScreen.storyboard */,
 				0856177029FAEE4D0056CDCC /* Information.storyboard */,
 			);
@@ -136,6 +166,7 @@
 		FD23653029F81E68005290A4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FDA9E5DD29FBED7F00AACC59 /* Ingredient.swift */,
 				FD1FA78C29F94235009C2712 /* Receipt.swift */,
 			);
 			path = Models;
@@ -208,12 +239,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDDF1BC029FAE45A0024F617 /* AlertView.xib in Resources */,
 				FD720BAB29F81FD7000C98EA /* .gitignore in Resources */,
 				0856176129F94B240056CDCC /* Gilroy-Medium.ttf in Resources */,
 				FD23652629F81D31005290A4 /* LaunchScreen.storyboard in Resources */,
+				FD293DF529F95DCC00C1385B /* MainStoryboard.storyboard in Resources */,
 				0856176029F94B240056CDCC /* Gilroy-Bold.ttf in Resources */,
 				0856177129FAEE4D0056CDCC /* Information.storyboard in Resources */,
 				FD23652329F81D31005290A4 /* Assets.xcassets in Resources */,
+
+ main
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,15 +259,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				0856176529F950010056CDCC /* TeamList.swift in Sources */,
+ main
 				FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */,
 				0856176F29FAED2F0056CDCC /* InformationViewController.swift in Sources */,
 				0856177729FD06E10056CDCC /* PersonTableViewCell.swift in Sources */,
 				0856176B29FAB5B20056CDCC /* AboutPersonViewController.swift in Sources */,
 				FD23651E29F81D31005290A4 /* ViewController.swift in Sources */,
 				FD23651A29F81D31005290A4 /* AppDelegate.swift in Sources */,
+				FDDF1BC229FAF10C0024F617 /* AlertView.swift in Sources */,
+				FD293DF729F95E6E00C1385B /* MainViewController.swift in Sources */,
+				FDEAC89B29F997E10008A6C2 /* TabBarController.swift in Sources */,
 				FD1FA78F29F94251009C2712 /* DataStore.swift in Sources */,
+				FDA9E5E229FBFBE800AACC59 /* IngredientsViewController.swift in Sources */,
 				FD23651C29F81D31005290A4 /* SceneDelegate.swift in Sources */,
+				FDBEB8B029FD363D0098BB4E /* ThirdViewController.swift in Sources */,
+				FDA9E5DE29FBED7F00AACC59 /* Ingredient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -354,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -379,6 +422,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Information;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -410,6 +454,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Information;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
