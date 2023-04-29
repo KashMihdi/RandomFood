@@ -13,7 +13,7 @@ class MealTimeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(receipts[0])
+        title = "Справочник рецептов"
         
     }
     
