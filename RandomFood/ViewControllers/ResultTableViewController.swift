@@ -8,11 +8,8 @@
 import UIKit
 class ResultTableViewController: UITableViewController {
     private var ingredientsList: [String] = []
-
-  var receipts: Receipt!
-   //var receipt = Receipt.getReceipt(with: .dinner, calories: 400)
     
-    
+    var receipts: Receipt!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +37,7 @@ class ResultTableViewController: UITableViewController {
         
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         
-       
+        
     }
 
     // MARK: - Table view data source
@@ -63,14 +60,12 @@ class ResultTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "description", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        
-        
+         
         content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 17)!
         content.textProperties.alignment = .natural
         content.text =  indexPath.section == 0 ? receipts?.description : ingredientsList[indexPath.row]
         cell.contentConfiguration = content
-        
-        
+       
         return cell
     }
 
@@ -78,10 +73,6 @@ class ResultTableViewController: UITableViewController {
         indexPath.section == 1 ? 27 : tableView.rowHeight
     }
     
-    override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        guard let header = view as? UITableViewHeaderFooterView else { return }
-        header.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
-    }
 }
 // MARK: - UITableViewDelegate
 extension ResultTableViewController {
@@ -106,7 +97,6 @@ extension ResultTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
     
 }// MARK: - UIFont
 extension UIFont {
