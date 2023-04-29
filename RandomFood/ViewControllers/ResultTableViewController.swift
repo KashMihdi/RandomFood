@@ -6,24 +6,26 @@
 //
 
 import UIKit
-
 class ResultTableViewController: UITableViewController {
     private var ingredientsList: [String] = []
 
-    //var receipt: Receipt!
-    var receipt = Receipt.getReceipt(with: .dinner, calories: 400)
+  var receipts: Receipt!
+   //var receipt = Receipt.getReceipt(with: .dinner, calories: 400)
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Сегодня на \(receipt?.mealTime.rawValue ?? "")"
         
-        let ingretients = receipt?.ingredients ?? [:]
+        title = "Сегодня на \(receipts?.mealTime.rawValue ?? "")"
+        
+        let ingretients = receipts?.ingredients ?? [:]
         for (key, value) in ingretients {
             let ingredientString = "\(key):   \(value)"
             ingredientsList.append(ingredientString)
         }
         // Создание изображения перед таблицей.
-        let imageView = UIImageView(image: UIImage(named: receipt?.nameOfReceipt ?? ""))
+        let imageView = UIImageView(image: UIImage(named: receipts?.nameOfReceipt ?? ""))
         imageView.contentMode = .scaleAspectFill
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
         imageView.layer.cornerRadius = imageView.frame.height / 2
@@ -39,13 +41,13 @@ class ResultTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let titleForHeaderInSection = section == 0
-            ? "\(receipt?.nameOfReceipt ?? ""), \(receipt?.calories ?? 0) ккал"
+            ? "\(receipts?.nameOfReceipt ?? ""), \(receipts?.calories ?? 0) ккал"
             : "Ингридиенты: "
         return titleForHeaderInSection
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let numberOfRowsInSection = section == 0 ? 1 : receipt?.ingredients.keys.count ?? 0
+        let numberOfRowsInSection = section == 0 ? 1 : receipts?.ingredients.keys.count ?? 0
         return numberOfRowsInSection
     }
     
@@ -55,7 +57,7 @@ class ResultTableViewController: UITableViewController {
         
         content.textProperties.font = UIFont.myFontGilroyMedium(17)
         content.textProperties.alignment = .justified
-        content.text =  indexPath.section == 0 ? receipt?.description : ingredientsList[indexPath.row]
+        content.text =  indexPath.section == 0 ? receipts?.description : ingredientsList[indexPath.row]
         cell.contentConfiguration = content
         
         return cell
@@ -97,3 +99,4 @@ extension UIFont {
         return UIFont(name: "Gilroy-Bold", size: size)!
     }
 }
+
