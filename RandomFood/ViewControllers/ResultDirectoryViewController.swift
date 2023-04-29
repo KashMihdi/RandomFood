@@ -14,7 +14,7 @@ class ResultDirectoryViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(receipts.nameOfReceipt)
+        
         
         title = "Сегодня на \(receipts?.mealTime.rawValue ?? "")"
         
@@ -25,12 +25,12 @@ class ResultDirectoryViewController: UITableViewController {
         }
         // Создание изображения перед таблицей.
         let imageView = UIImageView(image: UIImage(named: receipts?.nameOfReceipt ?? ""))
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 16
         imageView.layer.masksToBounds = true
         imageView.clipsToBounds = true
         
-        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 200))
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width - 32, height: 200))
         let inset: CGFloat = 16
         imageView.frame = CGRect(x: inset, y: inset, width: headerView.frame.width - inset * 2, height: 200)
         headerView.addSubview(imageView)
@@ -61,7 +61,9 @@ class ResultDirectoryViewController: UITableViewController {
         
         content.textProperties.font = UIFont.myFontGilroyMedium(17)
         content.textProperties.alignment = .natural
-        content.text =  indexPath.section == 0 ? receipts?.description : ingredientsList[indexPath.row]
+        content.text = indexPath.section == 0
+            ? receipts?.description
+            : ingredientsList[indexPath.row]
         cell.contentConfiguration = content
         
         return cell
@@ -87,9 +89,9 @@ extension ResultDirectoryViewController{
         
         return headerView
     }
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        60
-    }
+//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        60
+//    }
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
