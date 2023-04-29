@@ -9,18 +9,18 @@ import UIKit
 
 class DirectoryTableViewController: UITableViewController {
     var receipts = DataStore.shared.getReceipts()
-    //var receipts = Array(DataStore.shared.getReceipts().values.joined())
+    
     let categories: [MealTime] = [.breakfast, .lunch, .dinner]
     
-    
-   
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
+        tableView.rowHeight = 50
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
 
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         categories.count
     }
@@ -30,7 +30,8 @@ class DirectoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Directory", for: indexPath)
         var content = cell.defaultContentConfiguration()
         content.text = categories[indexPath.row].rawValue
-        content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 30)!
+        content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 19)!
+        content.textProperties.alignment = .natural
         content.imageToTextPadding = 16
         content.imageProperties.tintColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
         switch indexPath.row {
@@ -68,9 +69,9 @@ extension DirectoryTableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UITableViewHeaderFooterView()
         var config = headerView.defaultContentConfiguration()
-    
+        
         config.text = self.tableView(tableView, titleForHeaderInSection: section)
-        config.textProperties.font = UIFont.myFontGilroyBold(40)
+        config.textProperties.font = UIFont.myFontGilroyBold(30)
         config.textProperties.color = UIColor.label
         // установка переноса текста на новую строку
         config.textProperties.numberOfLines = 0
