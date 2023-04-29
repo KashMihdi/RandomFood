@@ -1,15 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "Медовый кефир 1.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Медовый кефир.jpeg",
+      "filename" : "Медовый кефир 3.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Медовый кефир 2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }
