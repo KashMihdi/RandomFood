@@ -53,7 +53,7 @@ class ResultDirectoryViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         
         content.textProperties.font = UIFont.myFontGilroyMedium(17)
-        //content.textProperties.alignment = .justified
+        content.textProperties.alignment = .natural
         content.text =  indexPath.section == 0 ? receipts?.description : ingredientsList[indexPath.row]
         cell.contentConfiguration = content
         
