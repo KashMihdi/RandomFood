@@ -24,11 +24,16 @@ class ResultDirectoryViewController: UITableViewController {
         // Создание изображения перед таблицей.
         let imageView = UIImageView(image: UIImage(named: receipts?.nameOfReceipt ?? ""))
         imageView.contentMode = .scaleAspectFill
-        imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
         imageView.layer.cornerRadius = 16
         imageView.layer.masksToBounds = true
+        imageView.clipsToBounds = true
         
-        tableView.tableHeaderView = imageView
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 200))
+        let inset: CGFloat = 16
+        imageView.frame = CGRect(x: inset, y: inset, width: headerView.frame.width - inset * 2, height: headerView.frame.height - inset * 2)
+        headerView.addSubview(imageView)
+        
+        tableView.tableHeaderView = headerView
     }
 
     // MARK: - Table view data source
