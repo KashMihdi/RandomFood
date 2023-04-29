@@ -220,7 +220,7 @@
                     <navigationItem key="navigationItem" title="RandomFood" id="JIH-Ky-u0n">
                         <barButtonItem key="leftBarButtonItem" image="person.3.fill" catalog="system" id="3iC-mH-qLa">
                             <connections>
-                                <segue destination="zSY-ee-Hhx" kind="presentation" modalPresentationStyle="automatic" id="LJV-j1-Ivw"/>
+                                <segue destination="zSY-ee-Hhx" kind="show" id="LJV-j1-Ivw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -289,7 +289,7 @@
                     <tabBarItem key="tabBarItem" title="" id="9st-Rz-BY0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ike-Ix-tKa">
-                        <rect key="frame" x="0.0" y="20" width="320" height="98.5"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.58431375029999999" green="0.82745099070000006" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
