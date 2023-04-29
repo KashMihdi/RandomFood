@@ -15,6 +15,8 @@ class MealTimeTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.separatorColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
         title = ""
+        tableView.rowHeight = 50
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
     
     // MARK: - Table view data source
@@ -33,11 +35,12 @@ class MealTimeTableViewController: UITableViewController {
         let receipt = receipts[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
-        content.imageToTextPadding = 16
-        content.image = UIImage(systemName: "menucard")
-        content.imageProperties.tintColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
+        content.imageToTextPadding = 10
+        content.image = UIImage(named: receipt.nameOfReceipt)
+        content.imageProperties.cornerRadius = 10
+        content.imageProperties.maximumSize = CGSize(width: tableView.rowHeight, height: tableView.rowHeight)
         content.text = receipt.nameOfReceipt
-        content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 20)!
+        content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 19)!
         cell.contentConfiguration = content
         
         let selectedBackgroundView = UIView()
@@ -78,3 +81,11 @@ class MealTimeTableViewController: UITableViewController {
         return headerView
     }
 }
+/*
+// MARK: - UITableViewDelegate
+extension MealTimeTableViewController {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+       80
+    }
+}
+*/
