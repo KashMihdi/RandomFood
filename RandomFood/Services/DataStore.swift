@@ -10,7 +10,7 @@ final class DataStore {
     
     static let shared = DataStore()
     
-    private init() {}
+    
     
     func getReceipts() -> [MealTime:[Receipt]] {
         let receipts: [Receipt] = [
@@ -564,4 +564,5 @@ final class DataStore {
         return dictionaryOfReceipts
         
     }
+    private init() {}
 }
