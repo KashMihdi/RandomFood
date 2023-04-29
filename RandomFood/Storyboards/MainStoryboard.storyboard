@@ -289,7 +289,7 @@
                     <tabBarItem key="tabBarItem" title="" id="9st-Rz-BY0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ike-Ix-tKa">
-                        <rect key="frame" x="0.0" y="20" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.58431375029999999" green="0.82745099070000006" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
@@ -334,8 +334,12 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1xm-2F-HTb">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.58431375029999999" green="0.82745099070000006" blue="0.61568629740000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fCd-KG-KdQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="dCX-Sg-eFI" kind="relationship" relationship="rootViewController" id="4F5-L4-GhO"/>
                     </connections>
