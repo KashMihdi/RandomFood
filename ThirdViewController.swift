@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  ThirdViewController.swift
 //  RandomFood
 //
 //  Created by Kasharin Mikhail on 29.04.2023.
@@ -7,8 +7,9 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-    var str: String?
+class ThirdViewController: UIViewController {
+
+    var receipts: [Receipt] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 

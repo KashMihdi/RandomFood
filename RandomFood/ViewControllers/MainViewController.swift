@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    
+    // MARK: - IBOutlets
     @IBOutlet weak var caloriesTextField: UITextField!
     @IBOutlet var mealTimeLabels: [UILabel]!
     @IBOutlet weak var findRecipeButton: UIButton!
@@ -22,19 +22,19 @@ class MainViewController: UIViewController {
     @IBOutlet weak var lunchButton: UIButton!
     @IBOutlet weak var dinnerButton: UIButton!
     
+    // MARK: - Private properties
     private var mealSelector: MealTime = .breakfast
     private var alertView: AlertView!
     
+    // MARK: - View Life Cycle
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         findRecipeButton.titleLabel?.font = UIFont(name: "Gilroy-Bold", size: 22)
     }
     
     override func viewDidLoad() {
-        blurEffect.alpha = 0
         super.viewDidLoad()
         setupUI()
-        breakfastButton.isSelected = true
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -42,12 +42,13 @@ class MainViewController: UIViewController {
         caloriesTextField.text = ""
     }
     
+    // MARK: - Keyboard setting
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
-    
+    // MARK: - IBActions
     @IBAction func chooseButtonPressed(_ sender: UIButton) {
         switch sender {
         case breakfastButton:
@@ -83,9 +84,30 @@ class MainViewController: UIViewController {
         }
     }
     
+    @objc func cancelButtonTapped() {
+        alertView.removeFromSuperview()
+        blurEffect.alpha = 0
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.navigationBar.isHidden = false
+    }
+    
+    @objc func randomButtonTapped() {
+        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
+        guard let secondVC = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
+        secondVC.str = Receipt.getReceipt(with: self.mealSelector, calories: nil)?.nameOfReceipt
+        self.navigationController?.pushViewController(secondVC, animated: true)
+        alertView.removeFromSuperview()
+        
+        blurEffect.alpha = 0
+        tabBarController?.tabBar.isHidden = false
+        navigationController?.navigationBar.isHidden = false
+    }
     
     
+    // MARK: - Setup UI
     private func setupUI() {
+        blurEffect.alpha = 0
+        
         mealTimeLabels.forEach{ label in
             label.font = UIFont(name: "Gilroy-Medium", size: 22)
         }
@@ -114,21 +136,27 @@ class MainViewController: UIViewController {
         for view in mealTimeViews {
             view.clipsToBounds = true
         }
+        
+        breakfastButton.isSelected = true
     }
     
+    // MARK: - AlertController
     private func setAlert() {
         alertView = Bundle.main.loadNibNamed("AlertView", owner: self)?.first as? AlertView
         view.addSubview(alertView)
         alertView.center = view.center
+        
         alertView.alertView.layer.cornerRadius = 30
         alertView.titleLabel.font = UIFont(name: "Gilroy-Bold", size: 21)
         alertView.messageLabel.font = UIFont(name: "Gilroy-Medium", size: 18)
         alertView.cancelButton.layer.cornerRadius = 16
+        
         var configCancel = alertView.cancelButton.configuration
         configCancel?.title = "Выход"
         configCancel?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 20)
         alertView.cancelButton.configuration = configCancel
         alertView.randomButton.layer.cornerRadius = 16
+        
         var configRandom = alertView.randomButton.configuration
         configRandom?.title = "Найти"
         configRandom?.attributedTitle?.font = UIFont(name: "Gilroy-Bold", size: 20)
@@ -142,25 +170,10 @@ class MainViewController: UIViewController {
         alertView.randomButton.addTarget(self, action: #selector(randomButtonTapped), for: .touchUpInside)
     }
     
-    @objc func cancelButtonTapped() {
-        alertView.removeFromSuperview()
-        blurEffect.alpha = 0
-        tabBarController?.tabBar.isHidden = false
-        navigationController?.navigationBar.isHidden = false
-    }
-    
-    @objc func randomButtonTapped() {
-        let storyboard = UIStoryboard(name: "MainStoryboard", bundle: nil)
-        guard let secondVC = storyboard.instantiateViewController(identifier: "SecondViewController") as? SecondViewController else { return }
-        secondVC.str = Receipt.getReceipt(with: self.mealSelector, calories: nil)?.nameOfReceipt
-        self.navigationController?.pushViewController(secondVC, animated: true)
-        alertView.removeFromSuperview()
-        blurEffect.alpha = 0
-        tabBarController?.tabBar.isHidden = false
-        navigationController?.navigationBar.isHidden = false
-    }
+
 }
 
+// MARK: - UITextFieldDelegate
 extension MainViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {

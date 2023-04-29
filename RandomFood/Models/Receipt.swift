@@ -14,6 +14,9 @@ struct Receipt {
     let calories: Int
     let mealTime: MealTime
     
+    var ingredientsForReceipt: Set<String> {
+        Set(ingredient.keys)
+    }
     
     static func getReceipt(with mealTime: MealTime, calories: Int?) -> Receipt? {
         if let calories {
@@ -24,6 +27,21 @@ struct Receipt {
             return DataStore.shared.getReceipts()[mealTime]?
                 .randomElement()
         }
+    }
+    
+    static func getResult(with ingredients: [String]) -> [Receipt] {
+        var matchedReceipts: [Receipt] = []
+        let setFromList = Set(ingredients)
+        let receipts = Array(DataStore.shared.getReceipts().values.flatMap{$0}.shuffled())
+        for receipt in receipts {
+            if !setFromList.isDisjoint(with: receipt.ingredientsForReceipt) {
+                matchedReceipts.append(receipt)
+                if matchedReceipts.count >= 5 {
+                    return matchedReceipts
+                }
+            }
+        }
+        return matchedReceipts
     }
 }
 
