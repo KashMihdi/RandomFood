@@ -29,7 +29,6 @@ class MealTimeTableViewController: UITableViewController {
         receipts.count
     }
     
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MealTime", for: indexPath)
         let receipt = receipts[indexPath.row]
@@ -49,10 +48,7 @@ class MealTimeTableViewController: UITableViewController {
         
         return cell
     }
-    
-    
-    
-    
+ 
     // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
