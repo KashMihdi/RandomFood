@@ -175,6 +175,8 @@
 		FD23652F29F81DC1005290A4 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+                FD293DF429F95DCC00C1385B /* MainStoryboard.storyboard */,
+                FDA9E5DF29FBFBA100AACC59 /* IngredientSB.storyboard */,
 				87662B2129FADB360001AE6C /* Result.storyboard */,
 				87526C1A29FC38AC0022A1F7 /* DirectoryReceipt.storyboard */,
 				FD23652429F81D31005290A4 /* LaunchScreen.storyboard */,
