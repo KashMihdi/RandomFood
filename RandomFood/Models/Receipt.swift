@@ -10,7 +10,7 @@ import Foundation
 struct Receipt {
     let nameOfReceipt: String
     let description: String
-    let ingredient: [String: String]
+    let ingredients: [String: String]
     let calories: Int
     let mealTime: MealTime
     
@@ -45,8 +45,10 @@ struct Receipt {
     }
 }
 
-enum MealTime {
-    case breakfast
-    case lunch
-    case dinner
+enum MealTime: String {
+    case breakfast = "завтрак"
+    case lunch = "обед"
+    case dinner = "ужин"
 }
+
+
