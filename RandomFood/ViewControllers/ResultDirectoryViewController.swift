@@ -25,7 +25,7 @@ class ResultDirectoryViewController: UITableViewController {
         let imageView = UIImageView(image: UIImage(named: receipts?.nameOfReceipt ?? ""))
         imageView.contentMode = .scaleAspectFill
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
-        imageView.layer.cornerRadius = imageView.frame.height / 2
+        imageView.layer.cornerRadius = 16
         imageView.layer.masksToBounds = true
         
         tableView.tableHeaderView = imageView
@@ -53,7 +53,7 @@ class ResultDirectoryViewController: UITableViewController {
         var content = cell.defaultContentConfiguration()
         
         content.textProperties.font = UIFont.myFontGilroyMedium(17)
-        content.textProperties.alignment = .justified
+        //content.textProperties.alignment = .justified
         content.text =  indexPath.section == 0 ? receipts?.description : ingredientsList[indexPath.row]
         cell.contentConfiguration = content
         
