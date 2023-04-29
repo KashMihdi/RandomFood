@@ -13,6 +13,7 @@
 		0856176B29FAB5B20056CDCC /* AboutPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856176A29FAB5B20056CDCC /* AboutPersonViewController.swift */; };
 		0856176F29FAED2F0056CDCC /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856176E29FAED2F0056CDCC /* InformationViewController.swift */; };
 		0856177129FAEE4D0056CDCC /* Information.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0856177029FAEE4D0056CDCC /* Information.storyboard */; };
+		0856177729FD06E10056CDCC /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0856177629FD06E10056CDCC /* PersonTableViewCell.swift */; };
 		FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA78C29F94235009C2712 /* Receipt.swift */; };
 		FD1FA78F29F94251009C2712 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1FA78E29F94251009C2712 /* DataStore.swift */; };
 		FD23651A29F81D31005290A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23651929F81D31005290A4 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 		0856176A29FAB5B20056CDCC /* AboutPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPersonViewController.swift; sourceTree = "<group>"; };
 		0856176E29FAED2F0056CDCC /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		0856177029FAEE4D0056CDCC /* Information.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Information.storyboard; sourceTree = "<group>"; };
+		0856177629FD06E10056CDCC /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		FD1FA78C29F94235009C2712 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		FD1FA78E29F94251009C2712 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		FD23651629F81D31005290A4 /* RandomFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		0856177529FD06D30056CDCC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0856177629FD06E10056CDCC /* PersonTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FD23650D29F81D30005290A4 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		FD23651829F81D31005290A4 /* RandomFood */ = {
 			isa = PBXGroup;
 			children = (
+				0856177529FD06D30056CDCC /* Views */,
 				0856175D29F94AEA0056CDCC /* Fonts */,
 				FD23653029F81E68005290A4 /* Models */,
 				FD23652D29F81D5F005290A4 /* ViewControllers */,
@@ -216,6 +227,7 @@
 				0856176529F950010056CDCC /* TeamList.swift in Sources */,
 				FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */,
 				0856176F29FAED2F0056CDCC /* InformationViewController.swift in Sources */,
+				0856177729FD06E10056CDCC /* PersonTableViewCell.swift in Sources */,
 				0856176B29FAB5B20056CDCC /* AboutPersonViewController.swift in Sources */,
 				FD23651E29F81D31005290A4 /* ViewController.swift in Sources */,
 				FD23651A29F81D31005290A4 /* AppDelegate.swift in Sources */,

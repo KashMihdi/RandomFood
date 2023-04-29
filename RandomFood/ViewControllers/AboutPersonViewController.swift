@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AboutPersonViewController: UIViewController {
+final class AboutPersonViewController: UIViewController {
     
     @IBOutlet var photoOfPerson: UIImageView!
     @IBOutlet var ageOfPerson: UILabel!
