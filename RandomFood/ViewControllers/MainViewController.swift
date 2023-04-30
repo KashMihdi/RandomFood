@@ -27,6 +27,11 @@ class MainViewController: UIViewController {
     private var alertView: AlertView!
     
     // MARK: - View Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
+    
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         findRecipeButton.titleLabel?.font = UIFont(name: "Gilroy-Bold", size: 22)

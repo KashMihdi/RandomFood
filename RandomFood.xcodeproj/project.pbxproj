@@ -133,14 +133,14 @@
 		FD23652D29F81D5F005290A4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				87662B1F29FADB080001AE6C /* ResultTableViewController.swift */,
-				87526C1C29FC38FD0022A1F7 /* DirectoryTableViewController.swift */,
-				87526C1E29FC3F1C0022A1F7 /* MealTimeTableViewController.swift */,
 				FDEAC89A29F997E10008A6C2 /* TabBarController.swift */,
 				FD293DF629F95E6E00C1385B /* MainViewController.swift */,
+				87526C1C29FC38FD0022A1F7 /* DirectoryTableViewController.swift */,
 				FDA9E5E129FBFBE800AACC59 /* IngredientsViewController.swift */,
-				0856176A29FAB5B20056CDCC /* AboutPersonViewController.swift */,
+				87526C1E29FC3F1C0022A1F7 /* MealTimeTableViewController.swift */,
 				0856176E29FAED2F0056CDCC /* InformationViewController.swift */,
+				87662B1F29FADB080001AE6C /* ResultTableViewController.swift */,
+				0856176A29FAB5B20056CDCC /* AboutPersonViewController.swift */,
 				FD0AE4D129FD74070098D072 /* AlertView.swift */,
 			);
 			path = ViewControllers;
