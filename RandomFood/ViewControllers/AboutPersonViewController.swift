@@ -13,6 +13,7 @@ final class AboutPersonViewController: UIViewController {
     @IBOutlet var ageOfPerson: UILabel!
     @IBOutlet var jobTitleOfPerson: UILabel!
     @IBOutlet var bioOfPerson: UILabel!
+    @IBOutlet var townLabel: UILabel!
     
     var person: PersonStore!
 
@@ -22,6 +23,7 @@ final class AboutPersonViewController: UIViewController {
         photoOfPerson.image = UIImage(named: person.fullName)
         photoOfPerson.layer.cornerRadius = 16
         ageOfPerson.text = "Возраст: \(person.age)"
+        townLabel.text = "Город: \(person.town)"
         jobTitleOfPerson.text = "Должность: \(person.jobTitle)"
         bioOfPerson.text = person.bio
     }
