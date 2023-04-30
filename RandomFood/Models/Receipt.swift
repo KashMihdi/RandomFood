@@ -21,7 +21,7 @@ struct Receipt {
     static func getReceipt(with mealTime: MealTime, calories: Int?) -> Receipt? {
         if let calories {
             return DataStore.shared.getReceipts()[mealTime]?
-                .filter{ ($0.calories - 100...$0.calories + 100).contains(calories)}
+                .filter{ ($0.calories - 50...$0.calories + 50).contains(calories)}
                 .randomElement()
         } else {
             return DataStore.shared.getReceipts()[mealTime]?
