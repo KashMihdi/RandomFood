@@ -26,5 +26,12 @@ final class AboutPersonViewController: UIViewController {
         townLabel.text = "Город: \(person.town)"
         jobTitleOfPerson.text = "Должность: \(person.jobTitle)"
         bioOfPerson.text = person.bio
+    /*
+        //Изменение размера шрифта заголовка.
+        let textLabel = UILabel()
+        textLabel.text = "О проекте"
+        textLabel.font = UIFont(name: "Gilroy-Bold", size: 23)
+        textLabel.textAlignment = .center
+        navigationItem.titleView = textLabel*/
     }
 }
