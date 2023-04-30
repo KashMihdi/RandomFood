@@ -40,6 +40,14 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        
+        //Изменение размера шрифта заголовка.
+        let textLabel = UILabel()
+        textLabel.text = "RandomFood"
+        textLabel.font = UIFont(name: "Gilroy-Bold", size: 25)
+        textLabel.textAlignment = .center
+        navigationItem.titleView = textLabel
+    
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -115,14 +123,14 @@ class MainViewController: UIViewController {
         blurEffect.alpha = 0
         
         mealTimeLabels.forEach{ label in
-            label.font = UIFont(name: "Gilroy-Medium", size: 22)
+            label.font = UIFont(name: "Gilroy-Medium", size: 19)
         }
         
-        caloriesTextField.font = UIFont(name: "Gilroy-Medium", size: 22)
+        caloriesTextField.font = UIFont(name: "Gilroy-Medium", size: 19)
         
         if let placeholder = caloriesTextField.placeholder {
             let attributes = [
-                NSAttributedString.Key.font: UIFont(name: "Gilroy-Medium", size: 22)
+                NSAttributedString.Key.font: UIFont(name: "Gilroy-Medium", size: 19)
             ]
             caloriesTextField.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: attributes as [NSAttributedString.Key : Any])
         }
