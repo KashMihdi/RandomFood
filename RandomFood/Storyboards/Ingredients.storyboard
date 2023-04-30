@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NEB-k3-b3y">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,10 +31,23 @@
                             <outlet property="delegate" destination="NEB-k3-b3y" id="SSg-2H-c0J"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="Jvm-r4-aB6" kind="show" identifier="detail" id="l0m-1n-hlr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjI-ep-P7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1109" y="-181"/>
+        </scene>
+        <!--FoodChoise-->
+        <scene sceneID="WF9-9V-dpk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FoodChoise" storyboardName="FoodChoise" id="Jvm-r4-aB6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YOT-wb-hgB"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mBI-fu-S60" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="-169"/>
         </scene>
     </scenes>
     <resources>
