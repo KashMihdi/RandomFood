@@ -20,12 +20,16 @@ class IngredientsViewController: UITableViewController {
         super.viewDidLoad()
         tableView.allowsMultipleSelection = true
         tableView.separatorColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
-//        let item = UIBarButtonItem(
-//            title: "Найти рецепт",
-//            image: nil,
-//            target: self,
-//            action: #selector(doneButtonTapped))
-//        navigationItem.rightBarButtonItem = item
+        
+        let item: UIBarButtonItem
+        item = UIBarButtonItem(
+            barButtonSystemItem: .search,
+            target: self,
+            action: #selector(doneButtonTapped)
+        )
+        navigationItem.rightBarButtonItem = item
+        navigationItem.rightBarButtonItem?.isEnabled = false
+
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -67,18 +71,23 @@ class IngredientsViewController: UITableViewController {
         return Array(ingredients.keys)[section]
     }
     
+    // MARK: - Transfer Data
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let mealTimeVC = segue.destination as? MealTimeTableViewController else { return }
+        mealTimeVC.receipts = sender as? [Receipt]
+    }
+    
     // MARK: - IBActions
-//    @objc func doneButtonTapped(_ sender: UIBarButtonItem) {
-//        let storyboard = UIStoryboard(name: "IngredientSB", bundle: nil)
-//        guard let thirdVC = storyboard.instantiateViewController(identifier: "ThirdViewController") as? ThirdViewController else { return }
-//        thirdVC.receipts = Receipt.getResult(with: selectedIngredients)
-//        self.navigationController?.pushViewController(thirdVC, animated: true)
-//    }
+    @objc func doneButtonTapped(_ sender: UIBarButtonItem) {
+        let receipts = Receipt.getResult(with: selectedIngredients)
+        performSegue(withIdentifier: "detail", sender: receipts)
+    }
 }
 // MARK: - TableViewDelegate
 extension IngredientsViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        navigationItem.rightBarButtonItem?.isEnabled = true
+        
         let sectionKey = Array(ingredients.keys)[indexPath.section]
         let sectionValues = ingredients[sectionKey]
         let selectedItem = sectionValues?[indexPath.row].name ?? ""
@@ -87,11 +96,13 @@ extension IngredientsViewController {
         if let cell = tableView.cellForRow(at: indexPath) {
             var content = cell.defaultContentConfiguration()
             content.text = sectionValues?[indexPath.row].name
-            content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 18)!
+            content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 21)!
             content.image = UIImage(systemName: "checkmark.circle")
             content.imageProperties.tintColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
             cell.contentConfiguration = content
         }
+        
+
     }
     
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
@@ -105,11 +116,15 @@ extension IngredientsViewController {
         if let cell = tableView.cellForRow(at: indexPath) {
             var content = cell.defaultContentConfiguration()
             content.text = sectionValues?[indexPath.row].name
-            content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 16)!
+            content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 19)!
             content.image = UIImage(systemName: "circle")
             content.imageProperties.tintColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
             cell.contentConfiguration = content
         }
+        if selectedIngredients.count == 0 {
+            navigationItem.rightBarButtonItem?.isEnabled = false
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
