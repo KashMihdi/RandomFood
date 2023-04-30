@@ -14,6 +14,14 @@ class DirectoryTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Изменение размера шрифта заголовка.
+        let textLabel = UILabel()
+        textLabel.text = "Выберите время приема пищи"
+        textLabel.font = UIFont(name: "Gilroy-Bold", size: 23)
+        textLabel.textAlignment = .center
+        navigationItem.titleView = textLabel
+        
         tableView.separatorColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
         tableView.rowHeight = 50
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
@@ -49,9 +57,9 @@ class DirectoryTableViewController: UITableViewController {
         
         return cell
     }
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+   /* override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         "Выберите время приема пищи:"
-    }
+    }*/
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
@@ -68,7 +76,7 @@ extension DirectoryTableViewController {
         var config = headerView.defaultContentConfiguration()
         
         config.text = self.tableView(tableView, titleForHeaderInSection: section)
-        config.textProperties.font = UIFont.myFontGilroyBold(30)
+        config.textProperties.font = UIFont.myFontGilroyBold(25)
         config.textProperties.color = UIColor.label
         // установка переноса текста на новую строку
         config.textProperties.numberOfLines = 0
