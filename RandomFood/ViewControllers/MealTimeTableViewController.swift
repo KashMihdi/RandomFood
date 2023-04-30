@@ -17,13 +17,20 @@ class MealTimeTableViewController: UITableViewController {
         title = ""
         tableView.rowHeight = 50
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        
+        //Изменение размера шрифта заголовка.
+        let textLabel = UILabel()
+        textLabel.text = "Справочник рецептов"
+        textLabel.font = UIFont(name: "Gilroy-Bold", size: 23)
+        textLabel.textAlignment = .center
+        navigationItem.titleView = textLabel
     }
     
     // MARK: - Table view data source
-    
+    /*
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         "Справочник рецептов"
-    }
+    }*/
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         receipts.count
@@ -67,7 +74,7 @@ class MealTimeTableViewController: UITableViewController {
         var config = headerView.defaultContentConfiguration()
     
         config.text = self.tableView(tableView, titleForHeaderInSection: section)
-        config.textProperties.font = UIFont.myFontGilroyBold(30)
+        config.textProperties.font = UIFont.myFontGilroyBold(25)
         config.textProperties.color = UIColor.label
         // установка переноса текста на новую строку
         config.textProperties.numberOfLines = 0
