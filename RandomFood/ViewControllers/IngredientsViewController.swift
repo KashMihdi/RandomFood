@@ -36,6 +36,7 @@ class IngredientsViewController: UITableViewController {
         super.viewDidDisappear(animated)
         tableView.reloadData()
         selectedIngredients = []
+        navigationItem.rightBarButtonItem?.isEnabled = false
     }
 
     // MARK: - TableViewDataSource
