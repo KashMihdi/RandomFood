@@ -14,14 +14,13 @@ class ResultTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
+        tableView.allowsSelection = false
         
         let textLabel = UILabel()
         textLabel.text = "Сегодня на \(receipts?.mealTime.rawValue ?? "")"
         textLabel.font = UIFont(name: "Gilroy-Bold", size: 23)
         textLabel.textAlignment = .center
         navigationItem.titleView = textLabel
-        
-        //title = "Сегодня на \(receipts?.mealTime.rawValue ?? "")"
         
         let ingretients = receipts?.ingredients ?? [:]
         for (key, value) in ingretients {
@@ -105,7 +104,8 @@ extension ResultTableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-}// MARK: - UIFont
+}
+// MARK: - UIFont
 extension UIFont {
     static func myFontGilroyMedium(_ size: CGFloat) -> UIFont {
         return UIFont(name: "Gilroy-Medium", size: size)!
