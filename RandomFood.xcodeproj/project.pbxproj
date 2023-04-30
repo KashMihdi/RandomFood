@@ -17,7 +17,6 @@
 		87526C1B29FC38AC0022A1F7 /* DirectoryReceipt.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87526C1A29FC38AC0022A1F7 /* DirectoryReceipt.storyboard */; };
 		87526C1D29FC38FD0022A1F7 /* DirectoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87526C1C29FC38FD0022A1F7 /* DirectoryTableViewController.swift */; };
 		87526C1F29FC3F1C0022A1F7 /* MealTimeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87526C1E29FC3F1C0022A1F7 /* MealTimeTableViewController.swift */; };
-		87526C2129FC7AAF0022A1F7 /* ResultDirectoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87526C2029FC7AAF0022A1F7 /* ResultDirectoryViewController.swift */; };
 		87662B2029FADB080001AE6C /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87662B1F29FADB080001AE6C /* ResultTableViewController.swift */; };
 		87662B2229FADB360001AE6C /* Result.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87662B2129FADB360001AE6C /* Result.storyboard */; };
 		FD0AE4D229FD74070098D072 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD0AE4D129FD74070098D072 /* AlertView.swift */; };
@@ -49,7 +48,6 @@
 		87526C1A29FC38AC0022A1F7 /* DirectoryReceipt.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectoryReceipt.storyboard; sourceTree = "<group>"; };
 		87526C1C29FC38FD0022A1F7 /* DirectoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryTableViewController.swift; sourceTree = "<group>"; };
 		87526C1E29FC3F1C0022A1F7 /* MealTimeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTimeTableViewController.swift; sourceTree = "<group>"; };
-		87526C2029FC7AAF0022A1F7 /* ResultDirectoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultDirectoryViewController.swift; sourceTree = "<group>"; };
 		87662B1F29FADB080001AE6C /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		87662B2129FADB360001AE6C /* Result.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Result.storyboard; sourceTree = "<group>"; };
 		FD0AE4D129FD74070098D072 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				87662B1F29FADB080001AE6C /* ResultTableViewController.swift */,
 				87526C1C29FC38FD0022A1F7 /* DirectoryTableViewController.swift */,
 				87526C1E29FC3F1C0022A1F7 /* MealTimeTableViewController.swift */,
-				87526C2029FC7AAF0022A1F7 /* ResultDirectoryViewController.swift */,
 				FDEAC89A29F997E10008A6C2 /* TabBarController.swift */,
 				FD293DF629F95E6E00C1385B /* MainViewController.swift */,
 				FDA9E5E129FBFBE800AACC59 /* IngredientsViewController.swift */,
@@ -273,7 +270,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87526C2129FC7AAF0022A1F7 /* ResultDirectoryViewController.swift in Sources */,
 				FD1FA78D29F94235009C2712 /* Receipt.swift in Sources */,
 				87526C1D29FC38FD0022A1F7 /* DirectoryTableViewController.swift in Sources */,
 				0856176529F950010056CDCC /* TeamList.swift in Sources */,

@@ -51,7 +51,7 @@ class IngredientsViewController: UITableViewController {
         
         var content = cell.defaultContentConfiguration()
         content.text = sectionValues[indexPath.row].name
-        content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 16)!
+        content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 19)!
         content.image = UIImage(systemName: "circle")
         content.imageProperties.tintColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
         cell.contentConfiguration = content

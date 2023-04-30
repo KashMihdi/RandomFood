@@ -8,11 +8,8 @@
 import UIKit
 class ResultTableViewController: UITableViewController {
     private var ingredientsList: [String] = []
-
-  var receipts: Receipt!
-   //var receipt = Receipt.getReceipt(with: .dinner, calories: 400)
     
-    
+    var receipts: Receipt!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +23,21 @@ class ResultTableViewController: UITableViewController {
         }
         // Создание изображения перед таблицей.
         let imageView = UIImageView(image: UIImage(named: receipts?.nameOfReceipt ?? ""))
-        imageView.contentMode = .scaleAspectFill
-        imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 200)
-        imageView.layer.cornerRadius = imageView.frame.height / 2
+        imageView.contentMode = .scaleToFill
+        imageView.layer.cornerRadius = 16
         imageView.layer.masksToBounds = true
+        imageView.clipsToBounds = true
         
-        tableView.tableHeaderView = imageView
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 200))
+        let inset: CGFloat = 16
+        imageView.frame = CGRect(x: inset, y: inset, width: headerView.frame.width - inset * 2, height: 200)
+        headerView.addSubview(imageView)
+        
+        tableView.tableHeaderView = headerView
+        
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        
+        
     }
 
     // MARK: - Table view data source
@@ -54,18 +60,19 @@ class ResultTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "description", for: indexPath)
         var content = cell.defaultContentConfiguration()
-        
-        content.textProperties.font = UIFont.myFontGilroyMedium(17)
-        content.textProperties.alignment = .justified
+         
+        content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 17)!
+        content.textProperties.alignment = .natural
         content.text =  indexPath.section == 0 ? receipts?.description : ingredientsList[indexPath.row]
         cell.contentConfiguration = content
-        
+       
         return cell
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         indexPath.section == 1 ? 27 : tableView.rowHeight
     }
+    
 }
 // MARK: - UITableViewDelegate
 extension ResultTableViewController {
@@ -90,6 +97,7 @@ extension ResultTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
 }// MARK: - UIFont
 extension UIFont {
     static func myFontGilroyMedium(_ size: CGFloat) -> UIFont {
