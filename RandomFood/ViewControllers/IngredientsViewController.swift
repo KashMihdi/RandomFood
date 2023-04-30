@@ -29,7 +29,12 @@ class IngredientsViewController: UITableViewController {
         )
         navigationItem.rightBarButtonItem = item
         navigationItem.rightBarButtonItem?.isEnabled = false
-
+        //Изменение размера шрифта заголовка.
+        let textLabel = UILabel()
+        textLabel.text = "Выберите продукты"
+        textLabel.font = UIFont(name: "Gilroy-Bold", size: 23)
+        textLabel.textAlignment = .center
+        navigationItem.titleView = textLabel
     }
     
     override func viewDidDisappear(_ animated: Bool) {
