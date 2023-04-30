@@ -77,11 +77,4 @@ class MealTimeTableViewController: UITableViewController {
         return headerView
     }
 }
-/*
-// MARK: - UITableViewDelegate
-extension MealTimeTableViewController {
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       80
-    }
-}
-*/
+

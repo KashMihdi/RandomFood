@@ -33,7 +33,6 @@
 		FD720BAB29F81FD7000C98EA /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FD720BAA29F81FD7000C98EA /* .gitignore */; };
 		FDA9E5DE29FBED7F00AACC59 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA9E5DD29FBED7F00AACC59 /* Ingredient.swift */; };
 		FDA9E5E229FBFBE800AACC59 /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDA9E5E129FBFBE800AACC59 /* IngredientsViewController.swift */; };
-		FDBEB8B029FD363D0098BB4E /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBEB8AF29FD363D0098BB4E /* ThirdViewController.swift */; };
 		FDDF1BC029FAE45A0024F617 /* AlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FDDF1BBF29FAE45A0024F617 /* AlertView.xib */; };
 		FDEAC89B29F997E10008A6C2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDEAC89A29F997E10008A6C2 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
@@ -67,8 +66,6 @@
 		FD720BAA29F81FD7000C98EA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		FDA9E5DD29FBED7F00AACC59 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		FDA9E5E129FBFBE800AACC59 /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
-		FDBEB8AD29FD36010098BB4E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		FDBEB8AF29FD363D0098BB4E /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		FDDF1BBF29FAE45A0024F617 /* AlertView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertView.xib; sourceTree = "<group>"; };
 		FDEAC89A29F997E10008A6C2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,9 +101,6 @@
 		FD23650D29F81D30005290A4 = {
 			isa = PBXGroup;
 			children = (
-				FDBEB8AD29FD36010098BB4E /* SecondViewController.swift */,
-				FDBEB8AF29FD363D0098BB4E /* ThirdViewController.swift */,
-				FDDF1BBF29FAE45A0024F617 /* AlertView.xib */,
 				FD720BAA29F81FD7000C98EA /* .gitignore */,
 				FD23651829F81D31005290A4 /* RandomFood */,
 				FD23651729F81D31005290A4 /* Products */,
@@ -172,6 +166,7 @@
 				FD23652429F81D31005290A4 /* LaunchScreen.storyboard */,
 				0856177029FAEE4D0056CDCC /* Information.storyboard */,
 				FD13B72629FE2CC400D67C0C /* FoodChoise.storyboard */,
+				FDDF1BBF29FAE45A0024F617 /* AlertView.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -290,7 +285,6 @@
 				FD1FA78F29F94251009C2712 /* DataStore.swift in Sources */,
 				FDA9E5E229FBFBE800AACC59 /* IngredientsViewController.swift in Sources */,
 				FD23651C29F81D31005290A4 /* SceneDelegate.swift in Sources */,
-				FDBEB8B029FD363D0098BB4E /* ThirdViewController.swift in Sources */,
 				FDA9E5DE29FBED7F00AACC59 /* Ingredient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

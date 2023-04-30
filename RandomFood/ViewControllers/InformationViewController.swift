@@ -18,7 +18,7 @@ final class InformationViewController: UIViewController {
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tabBarController?.tabBar.isHidden = true
         tableView.dataSource = self
         tableView.rowHeight = 60
         tableView.separatorStyle = .none
