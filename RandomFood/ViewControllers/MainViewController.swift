@@ -196,10 +196,12 @@ extension MainViewController: UITextFieldDelegate {
         textField.inputAccessoryView = keyboardToolbar
         
         let doneButton = UIBarButtonItem(
-            barButtonSystemItem: .done,
+            title: "Готово",
+            style: .done,
             target: textField,
             action: #selector(resignFirstResponder)
         )
+        doneButton.tintColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
         
         let flexBarButton = UIBarButtonItem(
             barButtonSystemItem: .flexibleSpace,
