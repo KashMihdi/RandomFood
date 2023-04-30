@@ -24,6 +24,14 @@ final class InformationViewController: UIViewController {
         tableView.separatorStyle = .none
         
         self.navigationItem.backButtonTitle = ""
+        
+        
+        //Изменение размера шрифта заголовка.
+        let textLabel = UILabel()
+        textLabel.text = "О проекте"
+        textLabel.font = UIFont(name: "Gilroy-Bold", size: 23)
+        textLabel.textAlignment = .center
+        navigationItem.titleView = textLabel
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
