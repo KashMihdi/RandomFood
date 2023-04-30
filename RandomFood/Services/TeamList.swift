@@ -11,6 +11,7 @@ struct PersonStore {
     let name: String
     let surname: String
     let age: String
+    let town: String
     let jobTitle: String
     let bio: String
     
@@ -24,6 +25,7 @@ struct PersonStore {
                 name: "Алексей",
                 surname: "Филиппов",
                 age: "30",
+                town: "Якутск",
                 jobTitle: "iOS Developer",
                 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             ),
@@ -31,6 +33,7 @@ struct PersonStore {
                 name: "Владимир",
                 surname: "Иванов",
                 age: "31",
+                town: "Москва",
                 jobTitle: "iOS Developer",
                 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             ),
@@ -38,6 +41,7 @@ struct PersonStore {
                 name: "Михаил",
                 surname: "Кашарин",
                 age: "32",
+                town: "Брянск",
                 jobTitle: "iOS Developer",
                 bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             )
