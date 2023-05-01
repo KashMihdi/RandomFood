@@ -46,9 +46,9 @@ struct Receipt {
 }
 
 enum MealTime: String {
-    case breakfast = "завтрак"
-    case lunch = "обед"
-    case dinner = "ужин"
+    case breakfast = "Завтрак"
+    case lunch = "Обед"
+    case dinner = "Ужин"
 }
 
 

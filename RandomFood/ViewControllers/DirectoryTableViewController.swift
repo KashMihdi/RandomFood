@@ -23,7 +23,7 @@ class DirectoryTableViewController: UITableViewController {
         navigationItem.titleView = textLabel
         
         tableView.separatorColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
-        tableView.rowHeight = 50
+        tableView.rowHeight = 70
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     }
 
@@ -37,7 +37,7 @@ class DirectoryTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Directory", for: indexPath)
         var content = cell.defaultContentConfiguration()
         content.text = categories[indexPath.row].rawValue
-        content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 19)!
+        content.textProperties.font = UIFont(name: "Gilroy-Medium", size: 22)!
         content.textProperties.alignment = .natural
         content.imageToTextPadding = 16
         content.imageProperties.tintColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)

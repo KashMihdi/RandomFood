@@ -15,7 +15,7 @@ class MealTimeTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.separatorColor = #colorLiteral(red: 0.5080919266, green: 0.8357288837, blue: 0.5953789353, alpha: 1)
         title = ""
-        tableView.rowHeight = 50
+        tableView.rowHeight = 80
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         
         //Изменение размера шрифта заголовка.
